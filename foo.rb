@@ -1,9 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 
-Sinatra::Application.default_options.merge!(
-  :port => 8080
-)
+set :port, 8080
 
 get '/' do
   host = ENV['VCAP_APP_HOST']
