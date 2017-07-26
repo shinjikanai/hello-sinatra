@@ -1,1 +1,1 @@
-web: bundle exec ruby foo.rb -p 8080
+web: bundle exec ruby foo.rb -p 80
