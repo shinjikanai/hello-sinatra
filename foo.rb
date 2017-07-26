@@ -1,8 +1,6 @@
 require 'rubygems'
 require 'sinatra'
 
-set :port, 8080
-
 get '/' do
   host = ENV['VCAP_APP_HOST']
   port = ENV['VCAP_APP_PORT']
