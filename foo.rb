@@ -11,7 +11,7 @@ get '/' do
   msg
 end
 
-set: port, #{port}
+set: port, ENV['VCAP_APP_PORT']
 
 get '/crash/:id' do
   Process.kill(9, params[:id].to_i)
