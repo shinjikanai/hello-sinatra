@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 
-
+set :port, ENV['VCAP_APP_PORT']
 
 get '/' do
   host = ENV['VCAP_APP_HOST']
@@ -10,8 +10,6 @@ get '/' do
   puts msg
   msg
 end
-
-set: port, ENV['VCAP_APP_PORT']
 
 get '/crash/:id' do
   Process.kill(9, params[:id].to_i)
